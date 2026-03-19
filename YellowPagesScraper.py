@@ -324,14 +324,14 @@ class YellowPagesScraper:
 
 def parse_args():
     parser = argparse.ArgumentParser(
-        prog="yellowpages_scraper",
+        prog="YellowPageScraper",
         description="Scrape business data from yellowpages.vn",
         formatter_class=argparse.RawTextHelpFormatter,
         epilog=(
             "Examples:\n"
-            '  python yellowpages_scraper.py "May mac"\n'
-            '  python yellowpages_scraper.py "May mac" -w "Binh Duong"\n'
-            '  python yellowpages_scraper.py "May mac" -w "Binh Duong" -p 3 -o out.csv'
+            '  python YellowPageScraper.py "May mac"\n'
+            '  python YellowPageScraper.py "May mac" -w "Binh Duong"\n'
+            '  python YellowPageScraper.py "May mac" -w "Binh Duong" -p 3 -o out.csv'
         ),
     )
     parser.add_argument(
