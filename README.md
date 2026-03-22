@@ -19,7 +19,7 @@ A two-phase Python scraper that extracts structured business data from [yellowpa
 
 ```
 yellowpages-scraper/
-├── yellowpages_scraper.py   # Main scraper (CLI entry point)
+├── YellowPagesScraper.py   # Main scraper (CLI entry point)
 ├── demo.ipynb               # Jupyter notebook walkthrough
 ├── results.csv              # Output file (generated on run)
 └── README.md
@@ -41,16 +41,16 @@ pip install requests beautifulsoup4 pandas
 
 ```bash
 # Minimal — keyword only (scrapes nationwide, auto-detects all pages)
-python yellowpages_scraper.py "May mac"
+python YellowPagesScraper.py "May mac"
 
 # With location filter
-python yellowpages_scraper.py "May mac" --where "Binh Duong"
+python YellowPagesScraper.py "May mac" --where "Binh Duong"
 
 # Limit to 3 pages and save to a custom file
-python yellowpages_scraper.py "May mac" -w "Binh Duong" -p 3 -o output.csv
+python YellowPagesScraper.py "May mac" -w "Binh Duong" -p 3 -o output.csv
 
 # Full help
-python yellowpages_scraper.py --help
+python YellowPagesScraper.py --help
 ```
 
 ### Arguments
@@ -67,7 +67,7 @@ python yellowpages_scraper.py --help
 ### As a Python module
 
 ```python
-from yellowpages_scraper import YellowPagesScraper
+from YellowPagesScraper import YellowPagesScraper
 
 scraper = YellowPagesScraper(
     keyword     = "May mac",
